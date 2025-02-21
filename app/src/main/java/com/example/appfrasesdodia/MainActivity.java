@@ -10,6 +10,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     //Atributo
@@ -34,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gerarFrase(View view) {
+
+        TextView texto = findViewById(R.id.textResultado);
+
+        int fraseAleatoria = new Random().nextInt(4);
+        String frase = frases [fraseAleatoria];
+
+        texto.setText(frase);
 
 
 
